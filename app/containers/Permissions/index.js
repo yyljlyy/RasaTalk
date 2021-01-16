@@ -87,22 +87,19 @@ export class Permissions extends React.PureComponent {
       <div>
         <Helmet>
           <title>Permissions</title>
-          <meta name="description" content="Permissions" />
+          <meta name="description" content="权限" />
         </Helmet>
         <Grid container spacing={16}>
           <Grid item xs={12}>
             <StyledCard>
-              <CardHeader
-                title="Role"
-                subheader="A user can only have one role."
-              />
+              <CardHeader title="角色" subheader="一个用户只能有一个角色." />
               {savingRoles && <StyledLoader />}
               <CardContent>
                 <Table>
                   <TableHead>
                     <TableRow>
-                      <TableCell>Role</TableCell>
-                      <TableCell>Permissions</TableCell>
+                      <TableCell>角色</TableCell>
+                      <TableCell>权限</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -130,17 +127,14 @@ export class Permissions extends React.PureComponent {
 
           <Grid item xs={12}>
             <StyledCard>
-              <CardHeader
-                title="Groups"
-                subheader="A user can be a member of multiple groups."
-              />
+              <CardHeader title="群组" subheader="一个用户可以有多个组." />
               {savingGroups && <StyledLoader />}
               <CardContent>
                 <Table>
                   <TableHead>
                     <TableRow>
-                      <TableCell>Role</TableCell>
-                      <TableCell>Permissions</TableCell>
+                      <TableCell>角色</TableCell>
+                      <TableCell>权限</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
@@ -169,18 +163,18 @@ export class Permissions extends React.PureComponent {
           <Grid item xs={12} style={{ marginBottom: '150px' }}>
             <StyledCard>
               <CardHeader
-                title="User"
-                subheader="Assign a user a role, their groups and any specific permissions."
+                title="用户"
+                subheader="为用户分配角色，他们的组和所有特定权限."
               />
               {savingUsers && <StyledLoader />}
               <CardContent>
                 <Table>
                   <TableHead>
                     <TableRow>
-                      <TableCell>User</TableCell>
-                      <TableCell>Role</TableCell>
-                      <TableCell>Groups</TableCell>
-                      <TableCell>Permissions</TableCell>
+                      <TableCell>用户</TableCell>
+                      <TableCell>角色</TableCell>
+                      <TableCell>群组</TableCell>
+                      <TableCell>权限</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>

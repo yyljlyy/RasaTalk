@@ -108,7 +108,7 @@ export class ThirdParty extends React.PureComponent {
               <TextField
                 select
                 name="facebook.agent"
-                helperText="Please select an agent"
+                helperText="请选择agent"
                 fullWidth
                 margin="normal"
                 value={facebook.agent}
@@ -123,7 +123,7 @@ export class ThirdParty extends React.PureComponent {
               <TextField
                 select
                 name="facebook.talkWrapper"
-                helperText="Please select an wrapper"
+                helperText="请选择wrapper"
                 fullWidth
                 margin="normal"
                 value={facebook.talkWrapper}
@@ -172,7 +172,7 @@ export class ThirdParty extends React.PureComponent {
               <TextField
                 id="Access"
                 name="telegram.telegram_token"
-                label="Telegram Bot Token"
+                label="Telegram机器人令牌"
                 margin="normal"
                 fullWidth
                 value={telegram.telegram_token}
@@ -181,8 +181,8 @@ export class ThirdParty extends React.PureComponent {
               <TextField
                 id="Access"
                 name="telegram.domain_name"
-                label="Current Domain name (HTTPS!)"
-                placeholder="https://talk.jackdh.com"
+                label="当前域名 (HTTPS!)"
+                placeholder="https://talk.jklh-ai.com"
                 margin="normal"
                 fullWidth
                 value={telegram.domain_name}
@@ -191,7 +191,7 @@ export class ThirdParty extends React.PureComponent {
               <TextField
                 select
                 name="telegram.agent"
-                helperText="Please select an agent"
+                helperText="请选择agent"
                 fullWidth
                 margin="normal"
                 value={telegram.agent}
@@ -206,7 +206,7 @@ export class ThirdParty extends React.PureComponent {
               <TextField
                 select
                 name="telegram.talkWrapper"
-                helperText="Please select an wrapper"
+                helperText="请选择wrapper"
                 fullWidth
                 margin="normal"
                 value={telegram.talkWrapper}

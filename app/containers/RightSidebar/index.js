@@ -104,9 +104,7 @@ export class RightSidebar extends React.PureComponent {
           <StyledDiv width={width}>
             <Card>
               <CardHeader
-                title={
-                  rasaIsUp ? 'Please create an Agent' : "Can't connect to rasa."
-                }
+                title={rasaIsUp ? '请创建一个代理' : '无法连接到rasa.'}
               />
             </Card>
           </StyledDiv>
@@ -127,14 +125,14 @@ export class RightSidebar extends React.PureComponent {
               fullWidth
             >
               <Tab label="Rasa" />
-              <Tab label="Chatbot" />
+              <Tab label="聊天机器人" />
             </Tabs>
           </Paper>
           <RightSidebarContent>
             <TextField
               id="select-agent"
               select
-              label="Agent"
+              label="代理"
               value={project}
               onChange={e => dispatch(updateAgent(e.target.value))}
               fullWidth
@@ -150,7 +148,7 @@ export class RightSidebar extends React.PureComponent {
             <TextField
               id="select-model"
               select
-              label="Model"
+              label="模型"
               value={model}
               onChange={e => dispatch(updateModel(e.target.value))}
               margin="normal"

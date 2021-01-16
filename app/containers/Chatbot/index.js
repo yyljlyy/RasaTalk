@@ -93,7 +93,7 @@ export class Chatbot extends React.PureComponent {
               <TextField
                 id="select-agent"
                 select
-                label="Agent"
+                label="代理"
                 value={tIndex}
                 onChange={e =>
                   dispatch(setTalkWrapper(talkWrappers[e.target.value]))
@@ -111,7 +111,7 @@ export class Chatbot extends React.PureComponent {
               <InputWrap>
                 <TextField
                   id="name"
-                  label="Chatbot Query"
+                  label="聊天机器人查询"
                   value={input}
                   inputProps={{
                     autoComplete: 'off',
@@ -133,7 +133,7 @@ export class Chatbot extends React.PureComponent {
             )}
             {!talkWrapperStrings.length && (
               <Typography style={{ marginTop: '15px', fontSize: '20px' }}>
-                Please create a Talk Group first!
+                请先创建一个对话组!
               </Typography>
             )}
           </Collapse>

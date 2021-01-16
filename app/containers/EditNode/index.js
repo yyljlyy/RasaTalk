@@ -134,9 +134,9 @@ export class EditNode extends React.PureComponent {
           <form onSubmit={handleSubmit(() => dispatch(saveNode()))}>
             {/* Name */}
             <Expansion
-              name="Name"
+              name="名称"
               subheading={fv.name && `${fv.name.name}`}
-              help="The name of the node is just used to help identify it. The Security group can be used to limit who can control / view it as well as help to organise them."
+              help="节点的名称仅用于帮助识别它。 安全组可用于限制谁可以控制/查看它以及帮助组织他们."
             >
               <FlexRow>
                 <Field
@@ -144,7 +144,7 @@ export class EditNode extends React.PureComponent {
                   component={TextField}
                   fullWidth
                   placeholder="Order Pizza"
-                  label="Name"
+                  label="名称"
                   type="text"
                 />
                 {isParent && (
@@ -153,14 +153,14 @@ export class EditNode extends React.PureComponent {
                     component={TextField}
                     fullWidth
                     placeholder="Food Group"
-                    label="Group"
+                    label="群组"
                     type="text"
                   />
                 )}
               </FlexRow>
               <React.Fragment>
                 <FlexCheckbox name="Node Enabled">
-                  <Field name="enabled" component={Checkbox} label="Enabled" />
+                  <Field name="enabled" component={Checkbox} label="启用" />
                 </FlexCheckbox>
               </React.Fragment>
             </Expansion>
@@ -169,7 +169,7 @@ export class EditNode extends React.PureComponent {
             <Expansion
               name="Recognises"
               subheading={this.recognisesName(fv)}
-              help="This is how this node will be triggered."
+              help="触发该节点的方式."
             >
               <React.Fragment>
                 <FlexRow>
@@ -180,7 +180,7 @@ export class EditNode extends React.PureComponent {
                       component={TextField}
                       fullWidth
                       placeholder="#order_pizza"
-                      label="Recognises"
+                      label="认可"
                       type="text"
                     />
                   )}
@@ -192,7 +192,7 @@ export class EditNode extends React.PureComponent {
                       component={TextField}
                       fullWidth
                       placeholder="^\[order_pizza]+\$"
-                      label="Regex"
+                      label="正则表达式"
                       type="text"
                     />
                   )}
@@ -203,8 +203,7 @@ export class EditNode extends React.PureComponent {
                         component={TextField}
                         fullWidth
                         placeholder="gi"
-                        label="Regex
-                      Flags"
+                        label="正则表达式标志"
                         type="text"
                       />
                     )}
@@ -215,17 +214,14 @@ export class EditNode extends React.PureComponent {
                   <Field
                     name="recognises.isJumpedTo"
                     component={Checkbox}
-                    label="Jumped To"
+                    label="跳到"
                   />
                 </FlexCheckbox>
               </React.Fragment>
             </Expansion>
 
             {/* Slots */}
-            <Expansion
-              name="Slots"
-              help="Use slots to extract details from a request."
-            >
+            <Expansion name="槽位" help="使用槽位解析对话.">
               <React.Fragment>
                 <FlexRow style={{ overflowX: 'auto', overflowY: 'hidden' }}>
                   <FieldArray name="slots" component={RenderSlots} />
@@ -238,8 +234,8 @@ export class EditNode extends React.PureComponent {
 
             {/* Responses */}
             <Expansion
-              name="Responses"
-              help="This is what is sent back to the user. If using a custom implementation markdown is suggested."
+              name="回复"
+              help="这就是发送回用户的内容。 如果建议使用自定义实现markdown"
             >
               <React.Fragment>
                 <FlexRow style={{ overflowX: 'auto', overflowY: 'hidden' }}>
@@ -265,9 +261,9 @@ export class EditNode extends React.PureComponent {
 
             {/* Quick Replies */}
             <Expansion
-              name="Quick Replies (Buttons)"
+              name="快速回复 (Buttons)"
               style={{ flexBasis: '50%' }}
-              help="These can be formatted into buttons to which the user can then press. Supplying a URL can be used to differentiation link buttons to text buttons."
+              help="这些可以格式化为按钮，用户可以按这些按钮。提供URL可用于将按钮链接到文本按钮."
             >
               <React.Fragment>
                 <FlexRow style={{ overflowX: 'auto', overflowY: 'hidden' }}>
@@ -280,15 +276,15 @@ export class EditNode extends React.PureComponent {
                     dispatch(arrayPush('EditNode', 'quick_replies', Map({})))
                   }
                 >
-                  Add Quick Reply
+                  添加快速回复
                 </Button>
               </React.Fragment>
             </Expansion>
 
             {/* Jump To */}
             <Expansion
-              name="Jump To"
-              help="If you want your node to automatically move to another, paste it's ID below."
+              name="跳转"
+              help="如果希望节点自动移动到另一个节点，请将其ID粘贴到下面。"
             >
               <React.Fragment>
                 <FlexRow>
@@ -297,7 +293,7 @@ export class EditNode extends React.PureComponent {
                     component={TextField}
                     fullWidth
                     placeholder="SW47UY"
-                    label="Jump To"
+                    label="跳转"
                     type="text"
                   />
                   <Field
@@ -305,7 +301,7 @@ export class EditNode extends React.PureComponent {
                     component={TextField}
                     fullWidth
                     placeholder="Date.now() < 12.00.00"
-                    label="Condition"
+                    label="条件"
                     type="text"
                   />
                 </FlexRow>
@@ -315,8 +311,8 @@ export class EditNode extends React.PureComponent {
 
             {/* Save */}
             <Expansion
-              name="Save"
-              help="This allows you to collect a user response and use it in a chat later on."
+              name="保存"
+              help="这允许您收集用户响应并在以后的聊天中使用它."
             >
               <React.Fragment>
                 <FlexRow>
@@ -325,7 +321,7 @@ export class EditNode extends React.PureComponent {
                     component={TextField}
                     fullWidth
                     placeholder="[userChoice]"
-                    label="Save Name"
+                    label="保存名称"
                     type="text"
                   />
                   <Field
@@ -333,7 +329,7 @@ export class EditNode extends React.PureComponent {
                     component={TextField}
                     fullWidth
                     placeholder="Date.now() < 12 || [pizzaType] !== 'pep'"
-                    label="Condition"
+                    label="条件"
                     type="text"
                   />
                 </FlexRow>
@@ -344,7 +340,7 @@ export class EditNode extends React.PureComponent {
             {/* Webhooks */}
             <Expansion
               name="Webhooks"
-              help="Webhooks allow you to use any API, However they can slot down a user's response until Sockets are implemented."
+              help="Webhooks允许您使用任何API，但是在实现套接字之前，它们可以将用户的响应放入槽中."
             >
               <React.Fragment>
                 <div style={{ width: '100%' }}>
@@ -360,7 +356,7 @@ export class EditNode extends React.PureComponent {
                       name="webhook.type"
                       component={TextField}
                       fullWidth
-                      label="Method"
+                      label="方法"
                       placeholder="GET"
                     />
                     <Field
@@ -377,14 +373,14 @@ export class EditNode extends React.PureComponent {
                       name="webhook.success"
                       component={TextField}
                       fullWidth
-                      label="Jump Success"
+                      label="跳转成功"
                       placeholder="GL60QB"
                     />
                     <Field
                       name="webhook.failure"
                       component={TextField}
                       fullWidth
-                      label="Jump Failure"
+                      label="跳转失败"
                       placeholder="OX41XU"
                     />
                   </FlexRow>
@@ -410,7 +406,7 @@ export class EditNode extends React.PureComponent {
                     <Field
                       name="webhook.enabled"
                       component={Checkbox}
-                      label="Enabled"
+                      label="开启"
                     />
                   </FlexCheckbox>
                 </React.Fragment>
@@ -418,7 +414,7 @@ export class EditNode extends React.PureComponent {
                   <Field
                     name="webhook.save"
                     component={Checkbox}
-                    label="Save response"
+                    label="保存响应"
                   />
                   {fv.webhook &&
                     fv.webhook.save && (
@@ -443,7 +439,7 @@ export class EditNode extends React.PureComponent {
                   disabled={(invalid && submitFailed) || submitting}
                   size="small"
                 >
-                  Save
+                  保存
                 </Button>
               )}
               {submitFailed &&
@@ -452,7 +448,7 @@ export class EditNode extends React.PureComponent {
                     style={{ color: 'red', marginLeft: '10px' }}
                     size="small"
                   >
-                    Please fix form errors.
+                    请修复表单错误.
                   </Typography>
                 )}
               <Button
@@ -461,7 +457,7 @@ export class EditNode extends React.PureComponent {
                 size="small"
                 style={{ marginLeft: 'auto' }}
               >
-                Close
+                关闭
               </Button>
             </ButtonSection>
           </form>

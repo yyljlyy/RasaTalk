@@ -84,9 +84,9 @@ export class SingleTalkFlow extends React.PureComponent {
       <div>
         <Helmet>
           <title>TalkFlow</title>
-          <meta name="description" content="Description of TalkFlow" />
+          <meta name="description" content="TalkFlow的描述" />
         </Helmet>
-        <BackButton tooltip="Back to nodes" link={`/talkGroups/${groupid}`} />
+        <BackButton tooltip="返回节点" link={`/talkGroups/${groupid}`} />
 
         <Wrapper>
           <Grid item xs={12} style={{ display: 'flex' }}>

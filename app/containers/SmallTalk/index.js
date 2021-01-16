@@ -32,7 +32,7 @@ export class SmallTalk extends React.PureComponent {
       <div>
         <Helmet>
           <title>SmallTalk</title>
-          <meta name="description" content="Description of SmallTalk" />
+          <meta name="description" content="SmallTalk的描述" />
         </Helmet>
         <FormattedMessage {...messages.header} />
       </div>

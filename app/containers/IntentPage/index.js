@@ -106,7 +106,7 @@ export class IntentPage extends React.PureComponent {
       <React.Fragment>
         <Helmet>
           <title>IntentPage</title>
-          <meta name="description" content="Description of IntentPage" />
+          <meta name="description" content="意图页面说明" />
         </Helmet>
 
         <EditAgent
@@ -121,14 +121,14 @@ export class IntentPage extends React.PureComponent {
         <Route
           path="/agents/:agent/intent/:intent"
           exact
-          name="Expressions"
+          name="表达式"
           component={Expressions}
         />
 
         <Route
           path={match.path}
           exact
-          name="Talk Flow"
+          name="对话流程"
           render={() => (
             <Wrapper>
               <BackButton tooltip="Back to agents" link="/agents" />
@@ -136,7 +136,7 @@ export class IntentPage extends React.PureComponent {
               <Grid item xs={8}>
                 {removingIntents && <LinearProgress color="primary" />}
                 <GenericTable
-                  title="Intents"
+                  title="意图"
                   items={intents}
                   handleDelete={deleteIntents =>
                     dispatch(removeIntents(this.state.agent, deleteIntents))
@@ -144,7 +144,7 @@ export class IntentPage extends React.PureComponent {
                   headers={[
                     {
                       id: 'name',
-                      label: 'Intent',
+                      label: '意图',
                       cellClick: route =>
                         dispatch(
                           push(
@@ -172,16 +172,15 @@ export class IntentPage extends React.PureComponent {
                 <Card>
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      Add Intent
+                      添加意图
                     </Typography>
                     <Typography component="p">
-                      Feel free to use any name you&#39;d like with or without
-                      prefixes.
+                      随意使用任何您喜欢的名称（带或不带前缀）
                     </Typography>
 
                     <TextField
                       id="newIntent"
-                      label="New Intent"
+                      label="新意图"
                       value={this.state.newIntent}
                       onChange={this.handleChange('newIntent')}
                       onKeyPress={this.handleKeyPress}
@@ -200,7 +199,7 @@ export class IntentPage extends React.PureComponent {
                           color="primary"
                         />
                       }
-                      label="Add Multiple"
+                      label="添加多个"
                     />
                   </CardContent>
                 </Card>

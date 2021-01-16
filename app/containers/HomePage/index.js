@@ -96,14 +96,10 @@ export class HomePage extends React.Component {
           user={this.props.user}
         >
           <Switch>
-            <Route
-              path="/permissions"
-              name="Permissions"
-              component={Permissions}
-            />
-            <Route path="/history" name="History" component={History} />
+            <Route path="/permissions" name="权限" component={Permissions} />
+            <Route path="/history" name="历史" component={History} />
 
-            <Route path="/feedback" name="Feedback" component={Feedback} />
+            <Route path="/feedback" name="反馈" component={Feedback} />
 
             <Route path="/talkGroups" component={TalkWrapper} />
 

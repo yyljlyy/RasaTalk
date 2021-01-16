@@ -82,9 +82,7 @@ export class LoginPage extends React.PureComponent {
       <Wrapper>
         <Header>
           <Image src={logo} alt="Rasa Talk Logo" />
-          <Sub variant="subtitle1">
-            Bringing dialog management and much more to the Rasa community
-          </Sub>
+          <Sub variant="subtitle1">为您带来对话管理</Sub>
         </Header>
 
         <StyledCard>

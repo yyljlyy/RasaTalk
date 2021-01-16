@@ -79,10 +79,10 @@ export class Synonyms extends React.PureComponent {
 
     return (
       <Wrapper>
-        <BackButton tooltip="Back to entities" link="/entities" />
+        <BackButton tooltip="返回实体" link="/entities" />
         <Grid item xs={8}>
           <SynTable
-            title={`Synonym: ${this.props.match.params.entity}`}
+            title={`同义词: ${this.props.match.params.entity}`}
             synonyms={synonyms}
             onUpdate={(reference, list) =>
               dispatch(updateVariants(entity, reference, list))
@@ -93,19 +93,19 @@ export class Synonyms extends React.PureComponent {
         <Grid item xs={4}>
           <ProfileCard
             loading={false}
-            agent="Synonyms"
-            description="Variants will only be used when the highlighted word in the training data matches the Synonym. Otherwise it will just link the matched word to this synonym."
+            agent="同义词"
+            description="仅当训练数据中突出显示的单词与同义词匹配时才使用变体。 否则，它只会将匹配的单词链接到该同义词."
             avatar={Link}
           />
           <Card style={{ marginTop: '30px' }}>
             <CardHeader
-              title="Add new synonym"
-              subheader="Feel free to use any name you&#39;d like with or without prefixes."
+              title="添加新的同义词m"
+              subheader="随意使用您想使用的任何名称（带或不带前缀）."
             />
             <CardContent>
               <TextField
                 id="newNode"
-                label="New Synonym"
+                label="新同义词"
                 value={this.state.newSyn}
                 onChange={this.handleChange('newSyn')}
                 onKeyPress={this.handleKeyPress}

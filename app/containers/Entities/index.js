@@ -77,14 +77,14 @@ export class Entities extends React.PureComponent {
     return (
       <div>
         <Helmet>
-          <title>Entities</title>
-          <meta name="description" content="Description of Entities" />
+          <title>实体</title>
+          <meta name="description" content="实体描述" />
         </Helmet>
         <Wrapper>
           <Grid item xs={8}>
             {entity && <Synonyms entity={entity} />}
             <GenericTable
-              title="Entities"
+              title="实体"
               items={entities}
               handleDelete={remove}
               headers={[
@@ -99,19 +99,19 @@ export class Entities extends React.PureComponent {
           <Grid item xs={4}>
             <ProfileCard
               loading={false}
-              agent="Talk Flow"
-              description="Entities represent a class of object or a data type that is relevant to a user's purpose. By recognising the entities that are mentioned in the user's input, the Rasa Talk can choose the specific actions to take to fulfill an intent."
+              agent="对话流程"
+              description="实体表示与用户目的相关的一类对象或数据类型。 通过识别用户输入中提到的实体，本工具可以选择采取特定行动来实现意图."
               avatar={Link}
             />
             <Card style={{ marginTop: '30px' }}>
               <CardHeader
-                title="Add new Entity"
-                subheader="Feel free to use any name you&#39;d like with or without prefixes."
+                title="添加新实体"
+                subheader="随意使用您想使用的任何名称."
               />
               <CardContent>
                 <TextField
                   id="newNode"
-                  label="New Entity"
+                  label="新实体"
                   value={this.state.newEntity}
                   onChange={this.handleChange('newEntity')}
                   onKeyPress={this.handleKeyPress}

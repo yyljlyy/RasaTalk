@@ -76,10 +76,10 @@ export class Talk extends React.PureComponent {
       <div>
         <Helmet>
           <title>Talk</title>
-          <meta name="description" content="Description of Talk" />
+          <meta name="description" content="对话说明" />
         </Helmet>
 
-        <BackButton tooltip="Back to groups" link="/talkGroups/" />
+        <BackButton tooltip="返回群组" link="/talkGroups/" />
 
         <EditTalkWrapper
           {...sideInfo}
@@ -158,7 +158,7 @@ export class Talk extends React.PureComponent {
 
                 <TextField
                   id="newNode"
-                  label="New Node"
+                  label="新节点"
                   value={this.state.newNode}
                   onChange={this.handleChange('newNode')}
                   onKeyPress={this.handleKeyPress}

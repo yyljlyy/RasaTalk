@@ -46,16 +46,16 @@ export class Agents extends React.PureComponent {
     return (
       <div>
         <Helmet>
-          <title>Agents</title>
+          <title>代理</title>
           <meta name="description" content="Description of Agents" />
         </Helmet>
 
-        <Route path="/agents/:agent" name="Intents" component={Intents} />
+        <Route path="/agents/:agent" name="意图" component={Intents} />
 
         <Route
           path={match.path}
           exact
-          name="Talk Flow"
+          name="对话流程"
           render={() => (
             <Wrapper>
               <Grid item xs={8}>
@@ -105,9 +105,9 @@ export class Agents extends React.PureComponent {
               <Grid item xs={4}>
                 <ProfileCard
                   avatar={IIcon}
-                  subtitle="Agents group expressions"
+                  subtitle="代理组表达式"
                   agent="Agents"
-                  description="Agents help to classify or split up different chatbots."
+                  description="代理帮助分类或分割不同的聊天机器人."
                 />
                 <NewAgent
                   edit={edit}

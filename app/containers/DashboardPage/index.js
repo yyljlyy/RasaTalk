@@ -64,7 +64,7 @@ export class DashboardPage extends React.PureComponent {
             <StatsCard
               icon={People}
               iconColor="orange"
-              title="Users"
+              title="用户"
               description={stats.users ? stats.users : 'Down'}
               statIcon={SupervisorAccount}
               statText="Last user: "
@@ -75,7 +75,7 @@ export class DashboardPage extends React.PureComponent {
             <StatsCard
               icon={QuestionAnswer}
               iconColor="red"
-              title="Chats"
+              title="聊天"
               description={
                 isNumber(stats.messageHistorys) ? stats.messageHistorys : 'Down'
               }
@@ -88,7 +88,7 @@ export class DashboardPage extends React.PureComponent {
             <StatsCard
               icon={InsertChart}
               iconColor="blue"
-              title="Agents"
+              title="代理"
               description={isNumber(stats.agents) ? stats.agents : 'Down'}
               small="#"
               statIcon={SupervisorAccount}

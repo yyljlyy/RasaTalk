@@ -134,7 +134,7 @@ export class Training extends React.PureComponent {
     return (
       <div>
         <Helmet>
-          <title>Training</title>
+          <title>训练</title>
           <meta name="description" content="Description of Training" />
         </Helmet>
 
@@ -185,20 +185,17 @@ export class Training extends React.PureComponent {
           <Grid item xs={4}>
             <ProfileCard
               loading={false}
-              subtitle="Will take some time"
-              agent="Training"
-              description="You will need to retrain each time you update your chosen agent."
+              subtitle="需要一些时间"
+              agent="训练中"
+              description="每次更新所选代理时，您都需要重新训练."
               avatar="https://s3.eu-west-2.amazonaws.com/rasatalk/813861_man_512x512.png"
             />
             <Card style={{ marginTop: '30px' }}>
-              <CardHeader
-                title="Generate"
-                subheader="Use this tool to generate the training data."
-              />
+              <CardHeader title="生成" subheader="使用此工具生成训练数据." />
               <CardContent>
                 <TextField
                   select
-                  helperText="Please select an agent"
+                  helperText="请选择代理"
                   fullWidth
                   value={agentIndex}
                   onChange={this.handleChange('agent')}
@@ -218,7 +215,7 @@ export class Training extends React.PureComponent {
                     variant="contained"
                     color="primary"
                   >
-                    Generate Training Data
+                    生成训练数据
                   </Button>
                   {loading && <StyledCP size={24} />}
                 </div>
@@ -229,7 +226,7 @@ export class Training extends React.PureComponent {
                       variant="contained"
                       color="primary"
                     >
-                      Train
+                      训练
                     </Button>
                   </Tooltip>
                 )}
@@ -248,7 +245,7 @@ export class Training extends React.PureComponent {
                         color: palette.type === 'dark' ? '#fff' : '#000',
                       }}
                     >
-                      Currently Training
+                      目前正在训练
                     </span>
                     <Timer palette={palette} />
                   </TimerWrapper>

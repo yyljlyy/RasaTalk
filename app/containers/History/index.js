@@ -31,8 +31,8 @@ export class History extends React.PureComponent {
     return (
       <div>
         <Helmet>
-          <title>History</title>
-          <meta name="description" content="Description of History" />
+          <title>历史</title>
+          <meta name="description" content="历史描述" />
         </Helmet>
         <FormattedMessage {...messages.header} />
       </div>

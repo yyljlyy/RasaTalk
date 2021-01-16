@@ -46,11 +46,8 @@ PrivateRoute.propTypes = {
 export default function App() {
   return (
     <AppWrapper>
-      <Helmet titleTemplate="%s - Rasa Talk" defaultTitle="Rasa Talk">
-        <meta
-          name="description"
-          content="A dialog management system for Rasa"
-        />
+      <Helmet titleTemplate="%s - 健科对话管理" defaultTitle="健科对话">
+        <meta name="description" content="Rasa的对话管理系统" />
       </Helmet>
       <CssBaseline />
       <Switch>
