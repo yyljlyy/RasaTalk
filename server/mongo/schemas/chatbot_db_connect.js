@@ -12,12 +12,26 @@ if (process.env.MONGOUSER && process.env.MONGOPASS) {
     password: encodeURIComponent(process.env.MONGOPASS),
   };
 }
+// mongoose.connect(
+//   process.env.MONGOCONNECTIONSTRING,
+//   options,
+//   err => {
+//     logger.mongo(err);
+//   },
+// );
 mongoose.connect(
-  process.env.MONGOCONNECTIONSTRING,
-  options,
+  `mongodb://127.0.0.1:27017/chat`,
+  {
+    auth: {
+      authdb: 'chat',
+      user: 'chat',
+      password: 'chatbotTest',
+    },
+  },
   err => {
     logger.mongo(err);
   },
 );
+
 logger.log(`Mongo connection: ${mongoose.connection.readyState}`);
 module.exports = mongoose;

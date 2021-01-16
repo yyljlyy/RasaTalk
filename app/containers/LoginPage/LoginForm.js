@@ -4,7 +4,6 @@ import { compose } from 'redux';
 import Alert from 'components/Snackbar/SnackbarContent';
 import { TextField } from 'redux-form-material-ui';
 import { Field, reduxForm } from 'redux-form/immutable';
-import { connect } from 'react-redux';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import {
   Button,
@@ -59,13 +58,13 @@ export class LoginForm extends React.PureComponent {
     return (
       <form onSubmit={handleSubmit}>
         <CardContent>
-          <Sub varient="subheading">Lets get it started</Sub>
+          <Sub varient="subheading">让我们开始吧</Sub>
 
           <StyledField
             name="email"
             component={TextField}
             fullWidth
-            label="Email"
+            label="邮箱"
             type="text"
           />
 
@@ -73,7 +72,7 @@ export class LoginForm extends React.PureComponent {
             name="password"
             component={TextField}
             fullWidth
-            label="Password"
+            label="密码"
             type="password"
           />
 
@@ -91,7 +90,7 @@ export class LoginForm extends React.PureComponent {
               type="submit"
               disabled={!valid}
             >
-              Login
+              登录
             </Button>
           )}
           {loading && <CircularProgress />}
@@ -113,14 +112,4 @@ const withForm = reduxForm({
   validate,
 });
 
-const withConnect = connect(() => ({
-  initialValues: {
-    email: 'demo@jackdh.com',
-    password: 'demo1234',
-  },
-}));
-
-export default compose(
-  withConnect,
-  withForm,
-)(LoginForm);
+export default compose(withForm)(LoginForm);

@@ -66,17 +66,17 @@ const validate = values => {
 
 export class RegisterForm extends React.PureComponent {
   render() {
-    const { handleSubmit, registerError, loading } = this.props;
+    const { handleSubmit, registerError, valid, loading } = this.props;
     return (
       <form onSubmit={handleSubmit}>
         <CardContent>
-          <Sub varient="subheading">Lets get you signed up</Sub>
+          <Sub varient="subheading">开始注册吧</Sub>
 
           <StyledField
             name="name"
             component={TextField}
             fullWidth
-            label="Nick Name"
+            label="昵称"
             type="text"
           />
 
@@ -84,7 +84,7 @@ export class RegisterForm extends React.PureComponent {
             name="email"
             component={TextField}
             fullWidth
-            label="Email"
+            label="邮箱"
             type="text"
           />
 
@@ -92,7 +92,7 @@ export class RegisterForm extends React.PureComponent {
             name="password"
             component={TextField}
             fullWidth
-            label="Password"
+            label="密码"
             type="password"
           />
 
@@ -100,7 +100,7 @@ export class RegisterForm extends React.PureComponent {
             name="repeatPassword"
             component={TextField}
             fullWidth
-            label="Confirm Password"
+            label="确认密码"
             type="password"
           />
 
@@ -113,8 +113,13 @@ export class RegisterForm extends React.PureComponent {
 
         <StyledActions>
           {!loading && (
-            <Button size="small" color="primary" type="submit" disabled>
-              Please check git for login details
+            <Button
+              size="small"
+              color="primary"
+              type="submit"
+              disabled={!valid}
+            >
+              注册
             </Button>
           )}
           {loading && <CircularProgress />}
@@ -126,6 +131,7 @@ export class RegisterForm extends React.PureComponent {
 
 RegisterForm.propTypes = {
   handleSubmit: PropTypes.func,
+  valid: PropTypes.bool,
   registerError: PropTypes.string,
   loading: PropTypes.bool,
 };

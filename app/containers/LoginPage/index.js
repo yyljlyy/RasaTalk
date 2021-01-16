@@ -82,14 +82,14 @@ export class LoginPage extends React.PureComponent {
       <Wrapper>
         <Header>
           <Image src={logo} alt="Rasa Talk Logo" />
-          <Sub variant="subtitle1">为您带来对话管理</Sub>
+          <Sub variant="subtitle1">健科对话管理</Sub>
         </Header>
 
         <StyledCard>
           <AppBar position="static">
             <Tabs value={value} onChange={this.handleChange} fullWidth>
-              <Tab label="Login" />
-              <Tab label="Register" />
+              <Tab label="登录" />
+              <Tab label="注册" />
             </Tabs>
           </AppBar>
           <SwipeableViews
